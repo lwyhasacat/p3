@@ -48,7 +48,7 @@ int main(int argc, char* argv[]) {
     for(int j = 1; j < chunksize; j++){
         B1[j] = B1[j - 1] + receive[j];
     }
-    correction[rank] = B1[n-1];
+    correction[rank] = B1[chunksize-1];
 
     for (int i = 0; i < size; i++){
       MPI_Bcast(&correction[i], 1, MPI_LONG, i, MPI_COMM_WORLD);
