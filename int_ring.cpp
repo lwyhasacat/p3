@@ -7,7 +7,7 @@
 #include <cassert>  
 
 int main(int argc, char* argv[]) {
-    long N = 10000;
+    long N = 50000;
     int rank, size;
     long* A = (long*) malloc(N * sizeof(long)); 
     long* B0 = (long*) malloc(N * sizeof(long));
